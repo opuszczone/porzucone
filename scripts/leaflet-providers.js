@@ -11,24 +11,18 @@
 	}
 }(this, function (L) {
 	'use strict';
+L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}', {
+	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	subdomains: 'abcd',
+	minZoom: 0,
+	maxZoom: 20,
+	ext: 'png'
+});
+	
+	
+	
+	
 
-	L.TileLayer.Provider = L.TileLayer.extend({
-		initialize: function (arg, options) {
-			var providers = L.TileLayer.Provider.providers;
-
-			var parts = arg.split('.');
-
-			var providerName = parts[0];
-			var variantName = parts[1];
-
-			if (!providers[providerName]) {
-				throw 'No such provider (' + providerName + ')';
-			}
-
-			var provider = {
-				url: providers[providerName].url,
-				options: providers[providerName].options
-			};
 
 			// overwrite values in provider from variant.
 			if (variantName && 'variants' in providers[providerName]) {
