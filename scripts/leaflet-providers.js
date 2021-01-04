@@ -509,12 +509,12 @@
 				attribution: '{attribution.OpenStreetMap} &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
 				subdomains: 'abcd',
 				maxZoom: 19,
-				variant: 'light_all'
+				variant: 'dark_all'
 			},
 			variants: {
-				Positron: 'light_all',
-				PositronNoLabels: 'light_nolabels',
-				PositronOnlyLabels: 'light_only_labels',
+				Positron: 'dark_all',
+				PositronNoLabels: 'dark_nolabels',
+				PositronOnlyLabels: 'dark_only_labels',
 				DarkMatter: 'dark_all',
 				DarkMatterNoLabels: 'dark_nolabels',
 				DarkMatterOnlyLabels: 'dark_only_labels'
